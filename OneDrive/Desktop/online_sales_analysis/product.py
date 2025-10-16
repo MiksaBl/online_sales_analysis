@@ -1,18 +1,17 @@
 # product.py
-# klasa za proizvode
+# Klasa za proizvod
 
 class Product:
     def __init__(self, name, price, quantity):
-        # atributi proizvoda
         self.name = name
         self.price = price
         self.quantity = quantity
 
-    def prikazi_info(self):
-        # ispis informacija o proizvodu
-        print(f"Naziv: {self.name}, Cena: {self.price} RSD, Kolicina: {self.quantity}")
+    # Prikaz informacija o proizvodu
+    def show_info(self):
+        print(f"Proizvod: {self.name}, Cena: {self.price}, Količina: {self.quantity}")
 
-    def azuriraj_kolicinu(self, nova_kolicina):
-        # menjanje kolicine proizvoda
-        self.quantity = nova_kolicina
-        print(f"Kolicina proizvoda '{self.name}' je azurirana na {self.quantity}.")
+    # Ažuriranje količine proizvoda
+    def update_quantity(self, new_quantity):
+        self.quantity = new_quantity
+        print(f"Količina proizvoda {self.name} ažurirana na {self.quantity}")

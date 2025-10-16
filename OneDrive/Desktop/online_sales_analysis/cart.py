@@ -1,22 +1,27 @@
 # cart.py
-# klasa za korpu kupca
+# Klasa koja upravlja korpom kupca
 
 class Cart:
     def __init__(self):
-        # lista proizvoda u korpi
-        self.cart_items = []
+        self.cart_items = []  # lista proizvoda u korpi
 
-    def dodaj_u_korpu(self, product):
+    # Dodavanje proizvoda u korpu
+    def add_to_cart(self, product):
         self.cart_items.append(product)
-        print(f"Dodat u korpu: {product.name}")
+        print(f"Proizvod {product.name} dodat u korpu.")
 
-    def ukupna_vrednost(self):
-        total = 0
-        for p in self.cart_items:
-            total += p.price * p.quantity
-        return total
+    # Računanje ukupne vrednosti korpe
+    def total_price(self):
+        ukupno = 0
+        for item in self.cart_items:
+            ukupno += item.price * item.quantity
+        return ukupno
 
-    def prikazi_korpu(self):
-        print("Sadrzaj korpe:")
-        for p in self.cart_items:
-            print(f"- {p.name}, {p.price} RSD x {p.quantity}")
+    # Prikaz sadržaja korpe
+    def show_cart(self):
+        if not self.cart_items:
+            print("Korpa je prazna.")
+            return
+        print("Sadržaj korpe:")
+        for item in self.cart_items:
+            print(f"- {item.name}, Cena: {item.price}, Količina: {item.quantity}")
