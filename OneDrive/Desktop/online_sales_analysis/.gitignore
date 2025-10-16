@@ -1,10 +1,10 @@
 # Ignoriši __pycache__ foldere
 __pycache__/
 
-# Ignoriši config fajl (ako ga budeš imao)
+# Ignoriši config fajl
 config.json
 
-# Ignoriši sistemske fajlove i OneDrive stvari
+# Ignoriši sistemske fajlove
 *.xml
 *.lnk
 .DS_Store
