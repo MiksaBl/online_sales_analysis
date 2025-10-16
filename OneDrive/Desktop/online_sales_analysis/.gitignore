@@ -1,4 +1,11 @@
+# Ignoriši __pycache__ foldere
+__pycache__/
+
+# Ignoriši config fajl (ako ga budeš imao)
 config.json
-*.png
-*.jpg
-*.jpeg
+
+# Ignoriši sistemske fajlove i OneDrive stvari
+*.xml
+*.lnk
+.DS_Store
+Thumbs.db
